@@ -8,7 +8,7 @@ const Products = props => {
 		<div className="products-container">
 			{props.products.map(product => (
 				<Product
-					key={product.key}
+					key={product.id}
 					product={product}
 					addItem={props.addItem}
 				/>
