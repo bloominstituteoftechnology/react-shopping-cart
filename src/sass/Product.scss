@@ -1,0 +1,49 @@
+.product {
+	border-radius: 5px;
+	background: white;
+	transition: 0.2s ease-in-out;
+	width: 333px;
+	margin: 30px;
+
+	&:hover {
+		box-shadow: 0px 5px 37px -22px rgba(0, 0, 0, 1);
+	}
+
+	.details {
+		display: flex;
+	}
+
+	.title {
+		font-weight: bold;
+		margin: 10px 0 0 25px;
+	}
+
+	.price {
+		margin-left: 25px;
+		padding: 5px 0;
+	}
+
+	img {
+		object-fit: contain;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		max-width: 333px;
+	}
+
+	button {
+		border-radius: 5px;
+		border: 1px solid lightcoral;
+		padding: 10px;
+		background: transparent;
+		transition: 0.15s ease-in-out;
+		margin: 10px 0;
+		color: lightcoral;
+		margin-left: 25px;
+
+		&:hover {
+			cursor: pointer;
+			background: lightcoral;
+			color: white;
+		}
+	}
+}
