@@ -14,11 +14,22 @@ const ShoppingCart = props => {
 		}, 0).toFixed(2);
 	};
 
+	const items = {};
+
+	cartContext.cart.forEach(item => {
+		if(!items[item.id]) {
+			items[item.id] = { data: item, quantity: 1 }
+		}
+		else {
+			items[item.id].quantity += 1;
+		}
+	})
+
 	return (
 		<div className="shopping-cart">
-			{cartContext.cart.map(item => (
-				<Item key={item.id} {...item} />
-			))}
+			{
+				Object.keys(items).map(key => <Item key={key} {...items[key].data} removeFromCart={cartContext.removeFromCart} quantity = {items[key].quantity} />)
+			}
 
 			<div className="shopping-cart__checkout">
 				<p>Total: ${getCartTotal()}</p>
