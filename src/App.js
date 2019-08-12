@@ -26,7 +26,7 @@ function App() {
 					{/* Routes */}
 					<Route exact path="/" component={Products}/>
 
-					<Route exact path='/' component={ShoppingCart} />
+					<Route path='/cart' component={ShoppingCart} />
 				</div>
 			</CartContext.Provider>
 		</ProductContext.Provider>
