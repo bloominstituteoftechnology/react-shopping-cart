@@ -24,11 +24,12 @@ function App() {
 
 			<ProductContext.Provider value={{products, addItem}}>
 				<Route exact path="/" component={Products}/>
-				<CartContext.Provider value={cart}>
+			</ProductContext.Provider>
+
+			<CartContext.Provider value={{cart}}>
 					<Navigation/>
 					<Route exact path="/cart" component={ShoppingCart}/>
-				</CartContext.Provider>
-			</ProductContext.Provider>
+			</CartContext.Provider>
 		</div>
 	);
 }
