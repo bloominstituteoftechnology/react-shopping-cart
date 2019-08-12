@@ -6,10 +6,10 @@ import { CartContext } from '../contexts/CartContext';
 const Navigation = () => {
 	return (
 		<div className="navigation">
-			<NavLink to="/">Products</NavLink>
+			{/* <NavLink to="/">Products</NavLink>
 			<NavLink to="/cart">
 				Cart <span>{props.cart.length}</span>
-			</NavLink>
+			</NavLink> */}
 		</div>
 	);
 };
