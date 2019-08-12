@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
+
 import data from './data';
 
-// Components
 import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
@@ -15,11 +15,14 @@ function App() {
 		setCart([...cart, item]);
 	};
 
+	const removeItem = (item) => {
+		setCart(cart.filter(cartItem => cartItem.id !== item.id));
+	};
+
 	return (
 		<div className="App">
 			<Navigation cart={cart} />
 
-			{/* Routes */}
 			<Route
 				exact
 				path="/"
@@ -27,13 +30,14 @@ function App() {
 					<Products
 						products={products}
 						addItem={addItem}
+						removeItem={removeItem}
 					/>
 				)}
 			/>
 
 			<Route
 				path="/cart"
-				render={() => <ShoppingCart cart={cart} />}
+				render={() => <ShoppingCart cart={cart} removeItem={removeItem} />}
 			/>
 		</div>
 	);
