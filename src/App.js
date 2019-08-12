@@ -15,8 +15,8 @@ function App() {
 		setCart([...cart, item]);
 	};
 
-	const removeItem = (item) => {
-		setCart(cart.filter(cartItem => cartItem.id !== item.id));
+	const removeItem = (id) => {
+		setCart(cart.filter(item => item.id !== id));
 	};
 
 	return (
@@ -36,6 +36,7 @@ function App() {
 			/>
 
 			<Route
+				exact
 				path="/cart"
 				render={() => <ShoppingCart cart={cart} removeItem={removeItem} />}
 			/>
