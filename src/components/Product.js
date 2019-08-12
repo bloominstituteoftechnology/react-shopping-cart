@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-const Product = props => {
+const Product = () => {
 	return (
 		<div className="product">
 			<img src={props.product.image} alt={`${props.product.title} book`} />
