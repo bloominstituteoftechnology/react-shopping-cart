@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ContextCart from '../contexts/ContextCart'
+
 
 const Item = props => {
+
+	const cartData = useContext(ContextCart);
+	console.log(cartData)
+
+	// const removeItem = item =>{
+	// }
+
 	return (
 		<div className="shopping-cart_item">
 			<img src={props.image} alt={`${props.title} book`} />
