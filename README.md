@@ -12,7 +12,7 @@ Commit your code regularly and meaningfully. This helps both you and your team l
 
 ## Description
 
-In this project you'll take take an existing e-commerce store and refactor the application to use the `Context API`.
+In this project you'll take take an existing e-commerce store and refactor the application to use the `Context API`..
 
 ## Project Set Up
 
