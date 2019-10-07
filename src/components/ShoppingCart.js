@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import uuid from 'uuid';
 
 // Components
 import Item from './ShoppingCartItem';
@@ -6,6 +7,8 @@ import Item from './ShoppingCartItem';
 // contexts
 
 import { cartContext } from '../contexts/CartContext';
+
+
 
 const ShoppingCart = () => {
 	const {cart} = useContext(cartContext);
@@ -20,7 +23,7 @@ const ShoppingCart = () => {
 	return (
 		<div className="shopping-cart">
 			{cart.map((item, index) => (
-				<Item {...item} />
+				<Item key={uuid()} {...item} />
 			))}
 
 			<div className="shopping-cart__checkout">
