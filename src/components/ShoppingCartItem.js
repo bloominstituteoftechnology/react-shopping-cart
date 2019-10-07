@@ -1,6 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 const Item = props => {
+	const cart = useContext(CartContext)
+	const RemoveItem = () => {
+		this.setState(prevState => {
+			data: update(prevState.data, {$splice: [[index, 1]]})
+		})
+	}
+
 	return (
 		<div className="shopping-cart_item">
 			<img src={props.image} alt={`${props.title} book`} />
@@ -9,7 +16,8 @@ const Item = props => {
 			<div>
 				<h1>{props.title}</h1>
 				<p>$ {props.price}</p>
-				<button>Remove from cart</button>
+				<button onClick={RemoveItem}>
+				Remove from cart </button>
 			</div>
 		</div>
 	);
