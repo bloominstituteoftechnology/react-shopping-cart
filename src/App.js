@@ -11,12 +11,12 @@ import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 
+// hooks
+import {useLocalStorage} from './hooks/SetLocalStorage';
+
 function App() {
 	const [products] = useState(data);
-	const [cart, setCart] = useState(() => {
-		const item = localStorage.getItem('cart');
-		return item ? JSON.parse(item) : [];
-	});
+	const [cart, setCart] = useLocalStorage('cart', []);
 
 	const addItem = item => {
 		setCart([...cart, item]);
@@ -30,7 +30,7 @@ function App() {
 	}
 
 	useEffect(() => {
-		localStorage.setItem('cart', JSON.stringify(cart))
+		setCart(cart);
 	}, [cart]);
 
 	return (
