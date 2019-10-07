@@ -13,7 +13,10 @@ import ShoppingCart from './components/ShoppingCart';
 
 function App() {
 	const [products] = useState(data);
-	const [cart, setCart] = useState([]);
+	const [cart, setCart] = useState(() => {
+		const item = localStorage.getItem('cart');
+		return item ? JSON.parse(item) : [];
+	});
 
 	const addItem = item => {
 		setCart([...cart, item]);
@@ -45,7 +48,7 @@ function App() {
 
 					<Route
 						path="/cart"
-						render={() => <ShoppingCart />}
+						component={ShoppingCart}
 					/>
 				</productContext.Provider>
 			</cartContext.Provider>
