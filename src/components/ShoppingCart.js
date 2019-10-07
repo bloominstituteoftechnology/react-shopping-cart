@@ -15,8 +15,8 @@ const ShoppingCart = () => {
 
 	return (
 		<div className="shopping-cart">
-			{cart.map(item => (
-				<Item key={item.id} {...item} removeItem={removeItem} />
+			{cart.map((item, idx) => (
+				<Item key={item.id + idx} {...item} removeItem={removeItem} />
 			))}
 
 			<div className="shopping-cart__checkout">
