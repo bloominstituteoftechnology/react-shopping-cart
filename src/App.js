@@ -24,11 +24,13 @@ function App() {
 
 	return (
 		<div className="App">
-			<Navigation cart={cart} />
 
 			{/* - Wrap all of your components/routes in `App.js` inside of `ProductContext.Provider` component. */}
 			<ProductContext.Provider value={{products, addItem}}>
+			{/* - Now pass a value prop to our `CartContext.Provider`, this value prop is going to contain our `cart` state. */}
 			<CartContext.Provider value={cart}>
+
+			<Navigation cart={cart} key={cart.id}/>
 
 			{/* Routes */}
 			<Route exact path="/" component={Products} />
