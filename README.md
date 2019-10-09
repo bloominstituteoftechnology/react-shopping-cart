@@ -17,14 +17,14 @@ In this project you'll take take an almost completed e-commerce store and refact
 ## Project Set Up
 
 - [*] Create a forked copy of this project.
-- [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] CD into the project base directory `cd react-shopping-cart`
-- [ ] Download project dependencies by running one of these two commands `yarn` or `npm install`
-- [ ] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [*] Add your team lead as collaborator on Github.
+- [*] Clone your OWN version of the repository in your terminal
+- [*] CD into the project base directory `cd react-shopping-cart`
+- [*] Download project dependencies by running one of these two commands `yarn` or `npm install`
+- [*] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
+- [*] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [*] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [*] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
