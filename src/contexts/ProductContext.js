@@ -3,6 +3,8 @@ import App from "../App";
 
 const ProductContext = createContext();
 
-<ProductContext.Provider value={{ products, addItem }}>
+{/* <ProductContext.Provider value={{ products, addItem }}>
 <App />
-</ProductContext.Provider>
+</ProductContext.Provider> */}
+
+export default ProductContext;
