@@ -7,12 +7,19 @@ import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 
+//Contexts
+
+
 function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
 
 	const addItem = item => {
 		// add the given item to the cart
+		!cart.includes(item) ? 
+			setCart([...cart, item]) :
+				setCart([...cart]);
+
 	};
 
 	return (
