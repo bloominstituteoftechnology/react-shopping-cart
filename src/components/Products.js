@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ProductContext from '../contexts.js/ProductContext'
 
 // Components
 import Product from './Product';
