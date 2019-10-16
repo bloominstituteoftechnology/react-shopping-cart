@@ -4,6 +4,7 @@ import React from 'react';
 import Product from './Product';
 
 const Products = props => {
+	console.log(props)
 	return (
 		<div className="products-container">
 			{props.products.map(product => (
