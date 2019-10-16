@@ -11,20 +11,24 @@ import ShoppingCart from "./components/ShoppingCart";
 import { ProductContext } from "./contexts/ProductContext";
 import { CartContext } from "./contexts/CartContext";
 
+// hooks
+import { useLocalStorage } from "./hooks/useLocalStorage";
+
 function App() {
   const [products] = useState(data);
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useLocalStorage("cart", []);
+
   const addItem = item => {
-	// add the given item to the cart
-    setCart([...cart,item]);
+    // add the given item to the cart
+    setCart([...cart, item]);
   };
   const removeItm = id => {
-	  const filterdArr = cart.filter(item => item.id !== id)
-	  return setCart(filterdArr)
-  }
+    const filteredArr = cart.filter(item => item.id !== id);
+    return setCart(filteredArr);
+  };
   return (
     <ProductContext.Provider value={{ products, addItem }}>
-      <CartContext.Provider value={{ cart , removeItm }}>
+      <CartContext.Provider value={{ cart, removeItm }}>
         <div className="App">
           <Navigation cart={cart} />
 
