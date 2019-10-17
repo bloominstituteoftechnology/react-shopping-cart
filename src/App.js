@@ -9,10 +9,11 @@ import ShoppingCart from './components/ShoppingCart';
 import { ProductContext } from './contexts/ProductContext';
 import { CartContext } from './contexts/CartContext';
 import { createDecipher } from 'crypto';
+import { useLocalStorage } from './utils/useLocalStorage'
 
 function App() {
 	const [products] = useState(data);
-	const [cart, setCart] = useState([]);
+	const [cart, setCart] = useLocalStorage('shoppingCard', []);
 
 	const addItem = item => {
 		// add the given item to the cart
