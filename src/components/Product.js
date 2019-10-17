@@ -12,6 +12,9 @@ const Product = props => {
 			<button onClick={() => props.addItem(props.product)}>
 				Add to cart
 			</button>
+			<button onClick={() => props.deleteItem(props.product.id)}>
+				Delete Item
+			</button>
 		</div>
 	);
 };
