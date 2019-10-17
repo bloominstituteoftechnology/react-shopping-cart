@@ -7,6 +7,7 @@ import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 import { ProductContext } from './contexts/ProductContext';
+import { CartContext } from './contexts/CartContext';
 import { createDecipher } from 'crypto';
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
 	return (
 		<div className="App">
 		<ProductContext.Provider value={{products, addItem}}>
-				<Navigation cart={cart} />
+		  <CartContext.Provider value={{cart}}>
+				<Navigation />
 
 				{/* Routes */}
 				<Route
@@ -32,8 +34,9 @@ function App() {
 
 				<Route
 					path="/cart"
-					render={() => <ShoppingCart cart={cart} />}
+				  component={ShoppingCart}
 				/>
+				</CartContext.Provider>
 			</ProductContext.Provider>
 		</div>
 		
