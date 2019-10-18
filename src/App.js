@@ -25,6 +25,7 @@ function App() {
 
 	return (
 		<div className="App">
+			{/* // this value is available to the children now. */}
 			<ProductContext.Provider value ={{ products, addItem }}> 
 				<CartContext.Provider value={{ cart, removeItem }}>
 						<Navigation cart={cart} />
