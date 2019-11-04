@@ -1,5 +1,14 @@
 import React, {useState, createContext} from "react";
+import data from "../../data"
 
-const ProductContext = createContext(); 
+export const  ProductContext = createContext({}); 
 
-export default ProductContext
+export const ProductProvider = (props) => {
+const [products] = useState(data);
+
+  return(
+<ProductContext.Provider value={{products}}>
+{props.children}
+</ProductContext.Provider>
+
+  )}
