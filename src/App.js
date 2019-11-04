@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 import data from './data';
+import ProductContext from "./components/Context/ProductContext";
+import CartContext from "./components/Context/CartContext";
 
 // Components
 import Navigation from './components/Navigation';
@@ -12,11 +14,13 @@ function App() {
 	const [cart, setCart] = useState([]);
 
 	const addItem = item => {
-		// add the given item to the cart
+		setCart(prevCart => [...prevCart, item])
 	};
 
 	return (
 		<div className="App">
+
+			
 			<Navigation cart={cart} />
 
 			{/* Routes */}
