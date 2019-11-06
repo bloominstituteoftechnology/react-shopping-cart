@@ -13,12 +13,15 @@ function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
 
-	const addItem = item => setCart(cart, item);
+	const addItem = (item) => setCart([...cart, item])
+
+
+	console.log(cart)
 
 	
 
 
-	console.log(products)
+	
 	return (
 		<div className="App">
 			<ProductContext.Provider value={[products, addItem]}>
