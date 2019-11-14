@@ -17,7 +17,8 @@ function App() {
     const newItem = {
       id: item.id,
       title: item.title,
-      price: item.price
+      price: item.price,
+      image: item.image
     };
 
     setCart([...cart, newItem])
