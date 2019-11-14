@@ -7,13 +7,16 @@ import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 
-function App() {
-	const [products] = useState(data);
-	const [cart, setCart] = useState([]);
+ function App() {
+   // data is an array of product objects with id, title, price, and image props
+ 	const [products] = useState(data);
+   // keeps track of all the items in our cart
+ 	const [cart, setCart] = useState([]);
 
-	const addItem = item => {
-		// add the given item to the cart
-	};
+   // takes in an item and adds it to our cart array
+ 	const addItem = item => {
+ 		setCart([...cart, item]);
+ 	};
 
 	return (
 		<div className="App">
