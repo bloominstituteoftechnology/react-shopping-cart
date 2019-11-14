@@ -13,7 +13,14 @@ function App() {
 
 	const addItem = item => {
     // add the given item to the cart
-    console.log('item added')
+    console.log('item added:', item);
+    const newItem = {
+      id: item.id,
+      title: item.title,
+      price: item.price
+    };
+
+    setCart([...cart, newItem])
 	};
 
 	return (
