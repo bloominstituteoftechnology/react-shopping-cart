@@ -4,8 +4,7 @@ import ProductContext from '../contexts/ProductContext';
 
 
  const Product = (props) => {
-	console.log ("PROPS", props)
-
+ 
 	const {products, addItem} = useContext(ProductContext);
 	return (
 		<div className="product">
