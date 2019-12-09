@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import { CartContext } from '../Contexts/CartContext';
+import { CartContext } from './Contexts/CartContext';
 
 
 const Navigation = () => {
@@ -9,7 +9,7 @@ const Navigation = () => {
 		<div className="navigation">
 			<NavLink to="/">Products</NavLink>
 			<NavLink to="/cart">
-				Cart <span>{cart.length}</span>
+				Cart <span>{cart}</span>
 			</NavLink>
 		</div>
 	);

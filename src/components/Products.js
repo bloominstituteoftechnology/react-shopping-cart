@@ -8,10 +8,9 @@ import { ProductContext } from './Contexts/ProductContext';
  
 
 const Products = () => {
+
 	const{ products, addItem} = useContext(ProductContext);
-	const { id } = useParams();
 	
-	const item = products.find(item => `${item.id}` === id); 
 	return (
 		<div className="products-container">
 			{products.map(product => (
