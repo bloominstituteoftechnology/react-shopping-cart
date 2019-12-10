@@ -5,7 +5,7 @@ import Item from "./ShoppingCartItem";
 import CartContext from "../Contexts/CartContext";
 
 const ShoppingCart = () => {
-  const cart = useContext(CartContext);
+  const { cart } = useContext(CartContext);
   const getCartTotal = () => {
     return cart
       .reduce((acc, value) => {
@@ -13,7 +13,7 @@ const ShoppingCart = () => {
       }, 0)
       .toFixed(2);
   };
-
+  console.log(cart);
   return (
     <div className="shopping-cart">
       {cart.map(item => (

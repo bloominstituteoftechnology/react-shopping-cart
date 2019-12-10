@@ -16,19 +16,16 @@ function App() {
   const addItem = item => {
     setCart([...cart, item]);
   };
+
   const removeItem = id => {
-    const shoppingCart = [...cart];
-    cart.forEach((currItem, i) => {
-      if (id === currItem.id) {
-        shoppingCart.splice(i, 1);
-      }
+    setCart(currentCart => {
+      return currentCart.filter(item => item.id !== id);
     });
-    console.log(shoppingCart);
   };
   return (
     <div className="App">
       <ProductContext.Provider value={{ products, addItem }}>
-        <CartContext.Provider value={cart}>
+        <CartContext.Provider value={{ cart, removeItem }}>
           <Navigation />
           {/* Routes */}
           <Route exact path="/" component={Products} />
