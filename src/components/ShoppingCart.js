@@ -1,24 +1,32 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { CartContext } from '../contexts/CartContext.js';
+import {ProductContext} from '../contexts/ProductContext.js';
 
 // Components
 import Item from './ShoppingCartItem';
 
-const ShoppingCart = props => {
+const ShoppingCart = () => {
+	const product = useContext(ProductContext);
+	const cart = useContext(CartContext);
+	// let cartCount= 0;
+	console.log('ShoppingCart cart:', cart);
+
 	const getCartTotal = () => {
-		return props.cart.reduce((acc, value) => {
+		return cart.reduce((acc, value) => {
 			return acc + value.price;
 		}, 0).toFixed(2);
 	};
 
 	return (
 		<div className="shopping-cart">
-			{props.cart.map(item => (
-				<Item key={item.id} {...item} />
+			{cart.map(item => (
+				<Item key={item.id} removeItem={product.removeItem} {...item}  />
 			))}
 
 			<div className="shopping-cart__checkout">
 				<p>Total: ${getCartTotal()}</p>
-				<button>Checkout</button>
+				<button onClick={()=>console.log('current cart:', cart)}>Checkout</button>
 			</div>
 		</div>
 	);
