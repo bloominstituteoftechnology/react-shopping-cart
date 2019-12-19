@@ -1,14 +1,15 @@
 import React, { useContext } from 'react';
 
 import { CartContext } from '../contexts/CartContext.js';
+import {ProductContext} from '../contexts/ProductContext.js';
 
 // Components
 import Item from './ShoppingCartItem';
 
 const ShoppingCart = () => {
-
+	const product = useContext(ProductContext);
 	const cart = useContext(CartContext);
-
+	// let cartCount= 0;
 	console.log('ShoppingCart cart:', cart);
 
 	const getCartTotal = () => {
@@ -20,12 +21,12 @@ const ShoppingCart = () => {
 	return (
 		<div className="shopping-cart">
 			{cart.map(item => (
-				<Item key={item.id} {...item} />
+				<Item key={item.id} removeItem={product.removeItem} {...item}  />
 			))}
 
 			<div className="shopping-cart__checkout">
 				<p>Total: ${getCartTotal()}</p>
-				<button>Checkout</button>
+				<button onClick={()=>console.log('current cart:', cart)}>Checkout</button>
 			</div>
 		</div>
 	);

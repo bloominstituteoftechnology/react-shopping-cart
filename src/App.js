@@ -15,18 +15,38 @@ import { CartContext } from './contexts/CartContext.js';
 function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
+	// const [count, setCount] = useState(0);
+
+	// const cartCount = count =>{
+	// 	let tempCount = count + 1;
+	//
+	// 	return tempCount;
+	//
+	// }
 
 	const addItem = item => {
 		// add the given item to the cart
 		setCart([...cart, item]);
-		console.log('current before new addition cart:', cart);
+
+		// console.log('current before new addition cart:', cart);
 	};
+
+	const removeItem = item => {
+		// console.log('filter test:', cart.filter(item2 => {
+		// 		return item!==item2.id;
+		// 	}));
+		setCart(cart.filter(item2 => {
+				return item2.id!==item;
+			}));
+
+		// console.log('remove item cart status:', cart);
+	}
 
 	return (
 
 		<div className="App">
-			<ProductContext.Provider value={{ products, addItem }} >
-				<CartContext.Provider value={ cart } >
+			<ProductContext.Provider value={{ products, addItem, removeItem }} >
+				<CartContext.Provider value={cart} >
 					<Navigation />
 
 					{/* Routes */}
