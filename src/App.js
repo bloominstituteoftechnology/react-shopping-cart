@@ -7,14 +7,16 @@ import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 
-
+//contexts
 import { ProductContext } from './contexts/ProductContext.js';
 import { CartContext } from './contexts/CartContext.js';
 
+//hooks
+import {useLocalStorage} from './hooks/useLocalStorage.js';
 
 function App() {
 	const [products] = useState(data);
-	const [cart, setCart] = useState([]);
+	const [cart, setCart] = useLocalStorage('savedCart', '');
 	// const [count, setCount] = useState(0);
 
 	// const cartCount = count =>{
