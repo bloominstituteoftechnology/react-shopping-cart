@@ -19,7 +19,6 @@ function App() {
 		<div className="App">
 			<Navigation cart={cart} />
 
-			{/* Routes */}
 			<Route
 				exact
 				path="/"
