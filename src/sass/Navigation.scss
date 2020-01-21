@@ -1,7 +1,9 @@
 .navigation {
 	display: flex;
 	justify-content: flex-end;
+	width: auto;
 	padding: 0 100px;
+
 	transition: 0.2s ease-in;
 	margin-bottom: 40px;
 
@@ -26,3 +28,8 @@
 		}
 	}
 }
+
+img {
+	width: 30%;
+}
+
