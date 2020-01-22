@@ -24,7 +24,7 @@ const ShoppingCart = () => {
 			<div className="shopping-cart__checkout">
 				<p>Total: ${getCartTotal()}</p>
 
-
+			
       <button>Check Out</button>
 			</div>
 		</div>

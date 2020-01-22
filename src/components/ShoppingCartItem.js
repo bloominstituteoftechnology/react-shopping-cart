@@ -10,7 +10,7 @@ const Item = props => {
 				<h1>{props.title}</h1>
 				<p>$ {props.price}</p>
 				<button onClick={() => props.removeItem(props.title)}>Remove from cart</button>
-				{/* <button onClick={() => props.clear()}>Clear Cart</button> */}
+				
 			</div>
 		</div>
 	);
