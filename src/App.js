@@ -2,6 +2,7 @@ import React, { useState, createContext, useContext } from "react";
 import { Route } from "react-router-dom";
 import data from "./data";
 
+// Context Items
 import { ItemsContext } from "./contexts/ItemsContext";
 import { CartContext } from "./contexts/CartContext";
 
