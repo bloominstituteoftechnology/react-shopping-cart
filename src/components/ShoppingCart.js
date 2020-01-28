@@ -4,6 +4,7 @@ import React from 'react';
 import Item from './ShoppingCartItem';
 
 const ShoppingCart = props => {
+	console.log("ShoppingCart props", props)
 	const getCartTotal = () => {
 		return props.cart.reduce((acc, value) => {
 			return acc + value.price;
