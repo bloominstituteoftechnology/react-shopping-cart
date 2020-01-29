@@ -13,10 +13,10 @@ function App() {
 
 	const addItem = item => {
 		console.log("item", item)
-		setCart(...cart, item)
+		setCart(cart => [...cart, item])
 		// add the given item to the cart
 	};
-
+	
 	return (
 		<div className="App">
 			<Navigation cart={cart} />
