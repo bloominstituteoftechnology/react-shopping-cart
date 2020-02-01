@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Product = props => {
 	return (
@@ -17,3 +17,4 @@ const Product = props => {
 };
 
 export default Product;
+
