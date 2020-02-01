@@ -6,10 +6,10 @@ const Item = props => {
 			<img src={props.image} alt={`${props.title} book`} />
 
 
-			<div>
+			<div key = {props.id}>
 				<h1>{props.title}</h1>
 				<p>$ {props.price}</p>
-				<button>Remove from cart</button>
+				<button onClick={()=>props.removeItem(props.id)}>Remove from cart</button>
 			</div>
 		</div>
 	);
