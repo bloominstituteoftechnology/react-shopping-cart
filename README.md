@@ -31,7 +31,7 @@ Follow these steps for completing your project.
 - [x] Submit a Pull-Request to merge `<firstName-lastName>` Branch into master (student's repository). **Please don't merge your own pull request**
 - [x] Add your team lead as a reviewer on the pull-request
 - [x] Your team lead will count the project as complete by merging the branch back into master.
-- [x] Do your magic!
+- [x] Do your magic! Excited to work my magic~
 
 # Project - Shopping Cart
 
