@@ -20,7 +20,7 @@ function App() {
 			<Navigation cart={cart} />
 
 			{/* Routes */}
-			<Route exact path="/"			>
+			<Route exact path="/">
 				<Products products={products} addItem={addItem} />
 			</Route>
 
