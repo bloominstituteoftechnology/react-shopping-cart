@@ -20,21 +20,13 @@ function App() {
 			<Navigation cart={cart} />
 
 			{/* Routes */}
-			<Route
-				exact
-				path="/"
-				render={() => (
-					<Products
-						products={products}
-						addItem={addItem}
-					/>
-				)}
-			/>
+			<Route exact path="/"			>
+				<Products products={products} addItem={addItem} />
+			</Route>
 
-			<Route
-				path="/cart"
-				render={() => <ShoppingCart cart={cart} />}
-			/>
+			<Route path="/cart">
+				<ShoppingCart cart={cart} />
+			</Route>
 		</div>
 	);
 }
