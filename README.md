@@ -71,22 +71,22 @@ Before you get started, please take a few minutes and get acquainted with this a
 <ProductContext.Provider value={{ products, addItem }}>
 ```
 
-- Now that we're providing our products state and addItem function we can refactor our products route to no longer use render props.
+- Now that we're providing our products state and addItem function we can simplify our products route a bit.
 
 **Before**
 
 ```js
-<Route
-  exact
-  path="/"
-  render={() => <Products products={products} addItem={addItem} />}
-/>
+<Route exact path="/">
+  <Products products={products} addItem={addItem} />
+</Route>
 ```
 
 **AFTER**
 
 ```js
-<Route exact path="/" component={Products} />
+<Route exact path="/">
+  <Products />
+</Route>
 ```
 
 - After refactoring you'll notice a few errors... Don't worry we'll clean those up shortly!
