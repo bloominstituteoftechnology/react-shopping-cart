@@ -81,7 +81,7 @@ Before you get started, please take a few minutes and get acquainted with this a
 </Route>
 ```
 
-**AFTER**
+**After**
 
 ```js
 <Route exact path="/">
