@@ -18,10 +18,10 @@ In this project you'll take take an almost completed e-commerce store and refact
 
 - [ ] Create a forked copy of this project.
 - [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] CD into the project base directory `cd react-shopping-cart`
-- [ ] Download project dependencies by running one of these two commands `yarn` or `npm install`
-- [ ] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
+- [ ] Clone your OWN version of the repository in your terminal.
+- [ ] CD into the project base directory `cd react-shopping-cart`.
+- [ ] Download project dependencies by running `npm install`.
+- [ ] Start up the app using `npm start`.
 - [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
@@ -71,22 +71,22 @@ Before you get started, please take a few minutes and get acquainted with this a
 <ProductContext.Provider value={{ products, addItem }}>
 ```
 
-- Now that we're providing our products state and addItem function we can refactor our products route to no longer use render props.
+- Now that we're providing our products state and addItem function we can simplify our products route a bit.
 
 **Before**
 
 ```js
-<Route
-  exact
-  path="/"
-  render={() => <Products products={products} addItem={addItem} />}
-/>
+<Route exact path="/">
+  <Products products={products} addItem={addItem} />
+</Route>
 ```
 
-**AFTER**
+**After**
 
 ```js
-<Route exact path="/" component={Products} />
+<Route exact path="/">
+  <Products />
+</Route>
 ```
 
 - After refactoring you'll notice a few errors... Don't worry we'll clean those up shortly!

@@ -31,6 +31,7 @@ function App() {
 		  <CartContext.Provider value={{cart, removeItem}}>
 				<Navigation />
 
+
 				{/* Routes */}
 				<Route
 					exact
@@ -44,6 +45,7 @@ function App() {
 				/>
 				</CartContext.Provider>
 			</ProductContext.Provider>
+
 		</div>
 		
 	);
