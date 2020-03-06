@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 
-//comtexts
+//contexts
 
 import { CartContext } from '../contexts/CartContext';
 
