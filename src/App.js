@@ -20,7 +20,6 @@ function App() {
       price: item.price,
       image: item.image
     };
-    // add the given item to the cart
     setCart([...cart, newItem]);
   };
 
