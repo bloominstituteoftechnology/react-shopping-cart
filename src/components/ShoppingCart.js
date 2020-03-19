@@ -6,8 +6,9 @@ import Item from './ShoppingCartItem';
 
 const ShoppingCart = () => {
 
-	const cart = useContext(CartContext);
+	const {cart, removeItem} = useContext(CartContext);
 	console.log(cart, " is cart")
+	console.log(removeItem, 'is removeItem')
 
 	const getCartTotal = () => {
 		return cart.reduce((acc, value) => {
@@ -18,7 +19,7 @@ const ShoppingCart = () => {
 	return (
 		<div className="shopping-cart">
 			{cart.map(item => (
-				<Item key={item.id} {...item} />
+				<Item key={item.id} removeItem={removeItem} {...item} />
 			))}
 
 			<div className="shopping-cart__checkout">
