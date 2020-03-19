@@ -4,7 +4,7 @@ import { ProductContext } from '../contexts/ProductContext';
 // Components
 import Product from './Product';
 
-const Products = props => {
+const Products = () => {
 
 	const { products, addItem } = useContext(ProductContext);
 
@@ -14,7 +14,7 @@ const Products = props => {
 				<Product
 					key={product.id}
 					product={product}
-					addItem={props.addItem}
+					addItem={addItem}
 				/>
 			))}
 		</div>
