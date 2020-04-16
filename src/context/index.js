@@ -5,3 +5,4 @@ import { createContext } from "react";
 export const ProductContext = createContext();
 // export const GameContext = createContext();
 console.log({ ProductContext });
+export const CartContext = createContext();
