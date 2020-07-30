@@ -7,6 +7,7 @@ import Item from './ShoppingCartItem';
 
 const ShoppingCart = () => {
 	const cart = useContext(CartContext);
+	console.log('from ShoppingCart', cart)
 	const getCartTotal = () => {
 		return cart.reduce((acc, value) => {
 			return acc + value.price;
