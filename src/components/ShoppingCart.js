@@ -12,9 +12,9 @@ const ShoppingCart = () => {
 	const cart = useContext(CartContext);
 	console.log('from shoppingCart', products)
 	const getCartTotal = () => {
-		return cart.cart.reduce((acc, value) => {
+		return cart.cart.reduce((acc => {
 			return acc + products.price;
-		}, 0).toFixed(2);
+		}), 0).toFixed(2);
 	};
 
 	return (
