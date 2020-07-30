@@ -15,6 +15,7 @@ function App() {
 	const [cart, setCart] = useState([]);
 
 	const addItem = item => {
+		console.log('from addItem', item)
 		setCart([
 			...cart,
 			products.item
@@ -32,13 +33,14 @@ function App() {
 				<Route exact path="/">
 					<Products />
 				</Route>
-			</ProductContext.Provider>
 
-			<CartContext.Provider value={{ cart }}>
-				<Route path="/cart">
-					<ShoppingCart />
-				</Route>
-			</CartContext.Provider>
+
+				<CartContext.Provider value={{ cart }}>
+					<Route path="/cart">
+						<ShoppingCart />
+					</Route>
+				</CartContext.Provider>
+			</ProductContext.Provider>
 		</div>
 	);
 }
