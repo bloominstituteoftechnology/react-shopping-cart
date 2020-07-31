@@ -13,7 +13,7 @@ const ShoppingCart = () => {
 			return acc + value.price;
 		}, 0).toFixed(2);
 	};
-	console.log('cart-', cart)
+	console.log('shoppingCart cart-', cart)
 	return (
 		<div className="shopping-cart">
 			{cart.map(item => (
