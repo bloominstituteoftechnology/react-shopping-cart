@@ -4,6 +4,7 @@ import data from './data';
 
 //Contexts
 import {ProductContext} from "./contexts/ProductContext";
+import {CartContext} from "./contexts/CartContext";
 
 // Components
 import Navigation from './components/Navigation';
@@ -20,18 +21,20 @@ function App() {
 
 	return (
 		<ProductContext.Provider value={{products, addItem}}>
-			<div className="App">
-				<Navigation cart={cart} />
+			<CartContext.Provider value={cart}>
+				<div className="App">
+					<Navigation/>
 
-				{/* Routes */}
-				<Route exact path="/">
-					<Products products={products} addItem={addItem} />
-				</Route>
+					{/* Routes */}
+					<Route exact path="/">
+						<Products/>
+					</Route>
 
-				<Route path="/cart">
-					<ShoppingCart cart={cart} />
-				</Route>
-			</div>
+					<Route path="/cart">
+						<ShoppingCart/>
+					</Route>
+				</div>
+			</CartContext.Provider>
 		</ProductContext.Provider>
 	);
 }
