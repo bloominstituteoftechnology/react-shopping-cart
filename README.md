@@ -2,19 +2,21 @@
 
 In this module you will take your newfound knowledge of `Context API` and refactor a e-commerce store to use `Context API` as well as extend the functionality of the application making it more robust!
 
-## Instructions
+## Introduction
 
 Read these instructions carefully. Understand exactly what is expected _before_ starting this project.
 
-## Commits
+### Commits
 
 Commit your code regularly and meaningfully. This helps both you and your team lead in case you ever need to return to old code for any number of reasons.
 
-## Description
+### Description
 
 In this project you'll take take an almost completed e-commerce store and refactor the application to use the `Context API`.
 
-## Project Set Up
+### Instructions
+
+### Task 1: Project Set up
 
 - [ ] Create a forked copy of this project.
 - [ ] Add your team lead as collaborator on Github.
@@ -26,16 +28,7 @@ In this project you'll take take an almost completed e-commerce store and refact
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
 
-Follow these steps for completing your project.
-
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into master (student's repository). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete by merging the branch back into master.
-- [ ] Do your magic!
-
-# Project - Shopping Cart
-
-## Directions
+### Task 2a: MVP
 
 Before you get started, please take a few minutes and get acquainted with this application. Understand what's going on and how it's working.
 
@@ -156,13 +149,19 @@ const { products, addItem } = useContext(ProductContext);
 
 We have now successfully converted our application into using `Context API` 🔥
 
-## _MVP Requirements:_
+**MVP Requirements**
 
 - Create a `ProductContext` and a `CartContext`
 - Use the Provider Component from `ProductContext` and `CartContext` to provide data to child components
 - Consume data using the `useContext` hook from `ProductContext` and `CartContext`
 
-## Stretch Problems
+### Task 2b: Exit Ticket
+
+Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/eJHwQzsFKWH4Adq7T/rkYPaoSnvo3y8t).
+
+The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
+
+### Task 3: Stretch Problems
 
 Do not attempt stretch problems until MVP has been reached and a final commit has been made.
 
@@ -170,3 +169,7 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
   Remember each item has an `id` this will help out a lot while creating your removeItem function!
 
 - Persist Cart Items using `localStorage`. (If you try this one, it will be a bit tricky to get our items to populate the shopping cart on a refresh. You'll have to think about where the data actually lives, and how you can get data there from localStorage when the app is being mounted after a refresh. Good luck!)
+
+## Submission Format
+* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+* [ ] Fill out your module retrospective form [here](https://forms.lambdaschool.com/module-retrospective) with a link to your PR
