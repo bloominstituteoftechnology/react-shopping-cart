@@ -17,18 +17,20 @@ import { CartContext } from './contexts/CartContext'
 import useLocalStorage from './hooks/useLocalStorage'
 
 function App() {
-	const [products] = useState(data);
+	const [products, setProducts] = useState(data);
 	const [cart, setCart] = useLocalStorage( 'cart', []);
 	debugger
 	const addItem = item => {
 		// add the given item to the cart
 		setCart([...cart, item])
+		setProducts(products.filter(aProduct => aProduct.id !== item.id))
 	};
-	const removeItem = itemId => {
+	const removeItem = item => {
 		setCart(
 			cart.filter( aCartItem => 
-				aCartItem.id !== itemId
+				aCartItem.id !== item.id
 		))
+		setProducts([...products, item])
 	}
 
 	return (
