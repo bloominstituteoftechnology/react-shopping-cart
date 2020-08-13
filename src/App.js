@@ -19,7 +19,7 @@ import useLocalStorage from './hooks/useLocalStorage'
 function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useLocalStorage( 'cart', []);
-
+	debugger
 	const addItem = item => {
 		// add the given item to the cart
 		setCart([...cart, item])

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 export const useLocalStorage = (key, initialValue) => {
     //states
@@ -8,9 +8,10 @@ export const useLocalStorage = (key, initialValue) => {
         debugger
         const item = JSON.parse(window.localStorage.getItem(key))
         //parse and return stored json or, if undefined, return initialValue
-        return item ? JSON.parse(item) : initialValue
+        return item ? item : initialValue
     })
     const setValue = value => {
+        debugger
         //save state
         setStoreValue(value)
         //save to local storage
