@@ -1,3 +1,4 @@
+// https://github.com/royeradames/react-shopping-cart.git
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 import data from './data';
@@ -19,10 +20,16 @@ function App() {
 		// add the given item to the cart
 		setCart([...cart, item])
 	};
+	const removeItem = itemId => {
+		setCart(
+			cart.filter( aCartItem => 
+				aCartItem.id !== itemId
+		))
+	}
 
 	return (
 		<div className="App">
-			<CartContext.Provider value={{ cart }}>
+			<CartContext.Provider value={{ cart, removeItem }}>
 				<Navigation />
 
 				{/* Routes */}
