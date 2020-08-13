@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import data from './data';
 
@@ -15,8 +15,21 @@ function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
 
+
+	useEffect(()=>{
+		if(window.localStorage.getItem("cart")){
+			setCart(JSON.parse(window.localStorage.getItem("cart")))
+		}else {
+			window.localStorage.setItem("cart", JSON.stringify(cart));
+		}
+	}, [])
+
+	useEffect(()=>{
+		window.localStorage.setItem("cart", JSON.stringify(cart));
+	}, [cart])
+
 	const addItem = item => {
-		setCart([...cart, item]);
+		setCart([...cart, item]);	
 	};
 
 	const removeItem = id => {
