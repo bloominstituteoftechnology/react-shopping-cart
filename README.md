@@ -115,13 +115,13 @@ x- Now our `Products` component is getting it's data solely from `Context API` ð
 
 **STEP 5 - Create the CartContext**
 
-- Now that we have refactored our `Products` component to utilize `Context API` let's refactor our `Cart` and `Navigation` Component to use `Context API` as well.
+x- Now that we have refactored our `Products` component to utilize `Context API` let's refactor our `Cart` and `Navigation` Component to use `Context API` as well.
 
-- To start create a new file in our contexts folder named `CartContext.js`, this context is going to be utilized by our `ShoppingCart` and `Navigation` component.
+x- To start create a new file in our contexts folder named `CartContext.js`, this context is going to be utilized by our `ShoppingCart` and `Navigation` component.
 
-- Inside of our new `CartContext` import `createContext` and create a new context named `CartContext`.
+x- Inside of our new `CartContext` import `createContext` and create a new context named `CartContext`.
 
-**STEP 5 - Providing data with CartContext**
+**STEP 6 - Providing data with CartContext**
 
 - Let's go ahead and bring our newly created `CartContext` into our `App.js` and wrap all of our components inside of our `CartContext.Provider`. Make sure our `ProductContext.Provider` is still the root provider.
 
