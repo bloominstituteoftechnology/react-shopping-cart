@@ -19,6 +19,11 @@
 
 		img {
 			width: 100px;
+
+			@media (max-width: 700px) {
+				width: 80%;
+				margin-bottom: 10px;
+			}
 		}
 
 		h1,
@@ -46,6 +51,11 @@
 				background: lightcoral;
 				color: white;
 			}
+		}
+		@media (max-width: 700px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: left;
 		}
 	}
 
