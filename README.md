@@ -28,7 +28,7 @@ In this project you'll take take an almost completed e-commerce store and refact
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
 
-### Task 2a: MVP
+### Task 2: MVP
 
 Before you get started, please take a few minutes and get acquainted with this application. Understand what's going on and how it's working.
 
@@ -155,12 +155,6 @@ We have now successfully converted our application into using `Context API` 🔥
 - Use the Provider Component from `ProductContext` and `CartContext` to provide data to child components
 - Consume data using the `useContext` hook from `ProductContext` and `CartContext`
 
-### Task 2b: Exit Ticket
-
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/eJHwQzsFKWH4Adq7T/rkYPaoSnvo3y8t).
-
-The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
-
 ### Task 3: Stretch Problems
 
 Do not attempt stretch problems until MVP has been reached and a final commit has been made.
@@ -172,4 +166,3 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 
 ## Submission Format
 * [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
-* [ ] Fill out your module retrospective form [here](https://forms.lambdaschool.com/module-retrospective) with a link to your PR
