@@ -12,7 +12,7 @@ import ShoppingCart from './components/ShoppingCart'
 
 
 function App() {
-	const [products] = useState(data);
+	const [product] = useState(data);
   const [cart, setCart] = useState([]);
 
   function addItem(item) {
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <CartContext.Provider value = {{cart, removeItem}}>
-        <ProductContext.Provider value={{ products, addItem }}>
+        <ProductContext.Provider value={{ product, addItem }}>
           <Navigation />
 
           {/* Routes */}

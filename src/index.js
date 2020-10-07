@@ -4,6 +4,7 @@ import { BrowserRouter as Router, withRouter } from 'react-router-dom'
 import './sass/index.scss'
 import App from './App'
 
+
 const AppWithRouter = withRouter(App);
 
 ReactDOM.render(
@@ -14,6 +15,11 @@ ReactDOM.render(
 
 );
 
+/*ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+, document.getElementById("root"));*/
 
 
 
