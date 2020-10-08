@@ -32,6 +32,7 @@ In this project you'll take take an almost completed e-commerce store and refact
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
 
+
 ### Task 2: MVP
 
 Before you get started, please take a few minutes and get acquainted with this application. Understand what's going on and how it's working.
