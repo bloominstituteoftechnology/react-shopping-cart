@@ -24,7 +24,7 @@ In this project you'll take take an almost completed e-commerce store and refact
 - [ ] CD into the project base directory `cd react-shopping-cart`.
 - [ ] Download project dependencies by running `npm install`.
 - [ ] Start up the app using `npm start`.
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [ ] Create a new branch: git checkout -b `<firstName-lastName>`. 
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
 
