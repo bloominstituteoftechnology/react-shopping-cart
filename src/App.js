@@ -15,26 +15,31 @@ function App() {
 
 	const addItem = item => {
 		// add the given item to the cart
-		return cart.push(item)
+		setCart([...cart, item])
 	};
 
 	return (
-		<ProductContext.Provder value={{ products, addItem }}>
-			<CartContext.Provider value={{ cart }}>
-				<div className="App">
-					<Navigation/>
+		
+			<ProductContext.Provder value={{ products, addItem }}>
+				<CartContext.Provider value={{ cart }}>
+					<div className="App">
+					
+						<Navigation />
 
-					{/* Routes */}
-					<Route exact path="/">
-						<Products/>
-					</Route>
+						{/* Routes */}
+						<Route exact path="/">
+							<Products/>
+						</Route>
 
-					<Route path="/cart">
-						<ShoppingCart/>
-					</Route>
-				</div>
-			</CartContext.Provider>
-		</ProductContext.Provder>
+						<Route path="/cart">
+							<ShoppingCart />
+						</Route>
+				
+					</div>
+				</CartContext.Provider>
+			</ProductContext.Provder>
+			
+		
 	);
 }
 
