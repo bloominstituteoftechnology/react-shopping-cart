@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {CartContext} from '../context/CartContext'
 
-// Components
+// Components //
 import Item from './ShoppingCartItem';
 
 const ShoppingCart = () => {

@@ -5,7 +5,7 @@ import data from './data';
 import {ProductContext} from './context/ProductContext'
 import {CartContext} from './context/CartContext'
 
-// Components
+// Components //
 import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
