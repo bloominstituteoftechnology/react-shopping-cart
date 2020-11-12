@@ -15,7 +15,7 @@ const Item = (props) => {
 						}}
 						>
 						{" "}
-						Remove from cart
+						Get it out of the cart!
 					</button>
 				</div>
 			</div>
