@@ -1,6 +1,11 @@
-import React from 'react';
+import React, {createContext} from 'react';
+
 
 const Item = props => {
+
+
+console.log(props)
+
 	return (
 		<div className="shopping-cart_item">
 			<img src={props.image} alt={`${props.title} book`} />
@@ -9,7 +14,7 @@ const Item = props => {
 			<div>
 				<h1>{props.title}</h1>
 				<p>$ {props.price}</p>
-				<button>Remove from cart</button>
+				<button onClick={()=> props.removeItem(props.id)}>Remove from cart</button>
 			</div>
 		</div>
 	);
