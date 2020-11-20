@@ -4,6 +4,9 @@ import data from './data';
 import { productContext } from "./contexts/ProductContext"
 import { cartContext } from "./contexts/CartContext"
 
+
+
+
 // Components
 import Navigation from './components/Navigation';
 import Products from './components/Products';
@@ -18,15 +21,16 @@ function App() {
 		setCart([...cart,item])
 	};
 
-	//create remove item function later
+	// create remove item function later
 
-	// const removeItem = item => {
-	// 	setCart(cart.filter((e)=> e.id !== item.id))
-	// }
+	const removeItem = id => {
+		setCart(cart.filter((e)=> e.id !== id))
+	}
 
 	return (
-		<productContext.Provider value={{products, addItem}}>
-			<cartContext.Provider value={cart}>
+		<productContext.Provider value={{products, addItem, removeItem}}>
+			<cartContext.Provider value={{cart,removeItem}}>
+
 		<div className="App">
 			<Navigation/>
 
@@ -40,6 +44,7 @@ function App() {
 				<ShoppingCart/>
 			</Route>
 		</div>
+
 		</cartContext.Provider>
 		</productContext.Provider>
 
