@@ -12,10 +12,12 @@ function App() {
 	const [cart, setCart] = useState([]);
 
 	const addItem = item => {
+		setCart(item)
 		// add the given item to the cart
 	};
 
 	return (
+		<ProductContext.Provider>
 		<div className="App">
 			<Navigation cart={cart} />
 
@@ -28,6 +30,7 @@ function App() {
 				<ShoppingCart cart={cart} />
 			</Route>
 		</div>
+		</ProductContext.Provider>
 	);
 }
 

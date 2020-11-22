@@ -16,7 +16,7 @@ In this project you'll take take an almost completed e-commerce store and refact
 
 ### Instructions
 
-### Task 1: Project Set up
+### Task 1: Project Set 
 
 - [ ] Create a forked copy of this project.
 - [ ] Add your team lead as collaborator on Github.
