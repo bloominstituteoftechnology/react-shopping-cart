@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useCallback, useContext } from 'react';
+import { useContext } from 'react';
 
 import { CartContext } from './../contexts/CartContext'
 
