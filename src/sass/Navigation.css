@@ -1,0 +1,34 @@
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0 100px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  margin-bottom: 40px;
+  background: #141618;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  padding: 30px 20px;
+}
+
+.navigation a span {
+  display: inline-block;
+  position: relative;
+  top: -8px;
+  left: 0px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+  background: lightcoral;
+  border-radius: 100%;
+  width: 18px;
+  height: 18px;
+}
+/*# sourceMappingURL=Navigation.css.map */
