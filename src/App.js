@@ -24,6 +24,7 @@ function App() {
 			<Navigation cart={cart} />
 
 			{/* Routes */}
+			<ProductContext.Provider>
 			<Route exact path="/">
 				<Products products={products} addItem={addItem} />
 			</Route>
@@ -31,6 +32,7 @@ function App() {
 			<Route path="/cart">
 				<ShoppingCart cart={cart} />
 			</Route>
+			</ProductContext.Provider>
 		</div>
 	);
 }
