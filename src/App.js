@@ -7,8 +7,8 @@ import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 
-// Step 1: Create the conext (just like a store)
-export const ProductContext = createContext ();
+import {ProductContext} from './contexts/ProductContext';
+
 
 function App() {
 	const [products] = useState(data);
