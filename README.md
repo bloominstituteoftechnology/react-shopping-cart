@@ -8,6 +8,7 @@ Read these instructions carefully. Understand exactly what is expected _before_ 
 
 ### Commits
 
+
 Commit your code regularly and meaningfully. This helps both you and your team lead in case you ever need to return to old code for any number of reasons.
 
 ### Description
