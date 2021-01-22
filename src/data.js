@@ -3,6 +3,7 @@ export default [
 		id: 1,
 		title: 'The Art Of War',
 		price: 10.11,
+		author: 'Sun Tzu',
 		image:
 			'https://images-na.ssl-images-amazon.com/images/I/41FBMkY3cgL._SX331_BO1,204,203,200_.jpg'
 	},
