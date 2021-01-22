@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Components
 import Product from './Product';
 
 const Products = props => {
@@ -18,3 +17,4 @@ const Products = props => {
 };
 
 export default Products;
+
