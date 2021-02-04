@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 // Components
 import Product from './Product';
 
+// Context
 import { ProductContext } from '../contexts/ProductContext';
 
 
