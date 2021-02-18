@@ -1,6 +1,6 @@
 # Module Project: Context API - Shopping Cart
 
-In this module you will take your newfound knowledge of `Context API` and refactor a e-commerce store to use `Context API` as well as extend the functionality of the application making it more robust!
+In this module you will take your newfound knowledge of `Context API` and refactor an e-commerce store to use `Context API` as well as extend the functionality of the application making it more robust!
 
 ## Introduction
 
@@ -18,15 +18,15 @@ In this project you'll take take an almost completed e-commerce store and refact
 
 ### Task 1: Project Set up
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository in your terminal.
-- [ ] CD into the project base directory `cd react-shopping-cart`.
-- [ ] Download project dependencies by running `npm install`.
-- [ ] Start up the app using `npm start`.
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add your team lead as collaborator on Github.
+- [x] Clone your OWN version of the repository in your terminal.
+- [x] CD into the project base directory `cd react-shopping-cart`.
+- [x] Download project dependencies by running `npm install`.
+- [x] Start up the app using `npm start`.
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 ### Task 2: MVP
 
@@ -36,7 +36,7 @@ Before you get started, please take a few minutes and get acquainted with this a
 
 - You'll also notice inside of our `App.js` we have 3 components. A navigation component and two route based components. Each of those components are all being passed either our `cart` state or `product` state as props, when we start to scale our application and add more props our codebase is going to start to become very cumbersome and will make our application hard to work with.
 
-- To combat this from happening we're going to refactor our application to use `Context API`, making it easier and more effiecent to access data across our application.
+- To combat this from happening we're going to refactor our application to use `Context API`, making it easier and more efficient to access data across our application.
 
 **Step 1 - Add item functionality**
 
