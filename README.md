@@ -2,7 +2,7 @@
 
 In this module you will take your newfound knowledge of `Context API` and refactor a e-commerce store to use `Context API` as well as extend the functionality of the application making it more robust!
 
-## Introduction
+## Introduction===================
 
 Read these instructions carefully. Understand exactly what is expected _before_ starting this project.
 
@@ -18,7 +18,7 @@ In this project you'll take take an almost completed e-commerce store and refact
 
 ### Task 1: Project Set up
 
-- [ ] Create a forked copy of this project.
+- [ ] Create a forked copy of this project.---------------------
 - [ ] Add your team lead as collaborator on Github.
 - [ ] Clone your OWN version of the repository in your terminal.
 - [ ] CD into the project base directory `cd react-shopping-cart`.
@@ -50,7 +50,7 @@ Before you get started, please take a few minutes and get acquainted with this a
 
 - In this file, import the `createContext` function from the react library and create our `ProductContext`.
 
-**STEP 3 - Providing data with ProductContext**
+**STEP 3 - Providing data with ProductContext**=-------------------
 
 - Now that we've created our `ProductContext` we can import into our `App.js`. Now we can start providing data across our application!
 
