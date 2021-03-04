@@ -13,6 +13,9 @@ function App() {
 
 	const addItem = item => {
 		// add the given item to the cart
+		setCart(item)
+		console.log(item)
+		
 	};
 
 	return (
