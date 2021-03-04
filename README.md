@@ -102,58 +102,58 @@ const { products, addItem } = useContext(ProductContext);
 
   [x] Remove it from the function parameters
   [x] Remove it from the products map
-  - Remove it from addItem prop
+  [x] Remove it from addItem prop
 
-- Now our `Products` component is getting it's data solely from `Context API` 😃.
+[x] Now our `Products` component is getting it's data solely from `Context API` 😃.
 
 **STEP 5 - Create the CartContext**
 
-- Now that we have refactored our `Products` component to utilize `Context API` let's refactor our `Cart` and `Navigation` Component to use `Context API` as well.
+[x] Now that we have refactored our `Products` component to utilize `Context API` let's refactor our `Cart` and `Navigation` Component to use `Context API` as well.
 
-- To start create a new file in our contexts folder named `CartContext.js`, this context is going to be utilized by our `ShoppingCart` and `Navigation` component.
+[x] To start create a new file in our contexts folder named `CartContext.js`, this context is going to be utilized by our `ShoppingCart` and `Navigation` component.
 
-- Inside of our new `CartContext` import `createContext` and create a new context named `CartContext`.
+[x] Inside of our new `CartContext` import `createContext` and create a new context named `CartContext`.
 
 **STEP 6 - Providing data with CartContext**
 
-- Let's go ahead and bring our newly created `CartContext` into our `App.js` and wrap all of our components inside of our `CartContext.Provider`. Make sure our `ProductContext.Provider` is still the root provider.
+[x] Let's go ahead and bring our newly created `CartContext` into our `App.js` and wrap all of our components inside of our `CartContext.Provider`. Make sure our `ProductContext.Provider` is still the root provider.
 
-- Now pass a value prop to our `CartContext.Provider`, this value prop is going to contain our `cart` state.
+[x] Now pass a value prop to our `CartContext.Provider`, this value prop is going to contain our `cart` state.
 
-- Now that we're providing our cart data, we can start to refactor our `Navigation` and `ShoppingCart` components.
+[x] Now that we're providing our cart data, we can start to refactor our `Navigation` and `ShoppingCart` components.
 
-- Let's start with our `ShoppingCart` component first. Go ahead and refactor the `ShoppingCart` route to no longer use render props. This will throw us an error, but we'll be able to resolve it quickly.
+[x] Let's start with our `ShoppingCart` component first. Go ahead and refactor the `ShoppingCart` route to no longer use render props. This will throw us an error, but we'll be able to resolve it quickly.
 
-- While were at it let's go ahead and remove the props from our navigation as well.
+[x] While were at it let's go ahead and remove the props from our navigation as well.
 
 **STEP 7 - The final stretch**
 
-- Our cart data is now being provided to us from our `CartContext` time to consume it!
+[x] Our cart data is now being provided to us from our `CartContext` time to consume it!
 
-- First, let's head to our `ShoppingCart` component and import the `useContext` hook and our `CartContext`.
+[x] First, let's head to our `ShoppingCart` component and import the `useContext` hook and our `CartContext`.
 
-- Now in the component, pass `CartContext` to the `useContext` hook and assign it to a variable named cart.
+[x] Now in the component, pass `CartContext` to the `useContext` hook and assign it to a variable named cart.
 
-- Inside of our component we now need to remove all instances of props.
+[x] Inside of our component we now need to remove all instances of props.
 
-  - Remove the `props` parameter
-  - Remove the `props` portion in our `getCartTotal` function
-  - Remove `props` when we're mapping over our cart
+  [x] Remove the `props` parameter
+  [x] Remove the `props` portion in our `getCartTotal` function
+  [x] Remove `props` when we're mapping over our cart
 
-- Time to do the same thing for our `Navigation` component.
-  - First import the `useContext` hook and our `CartContext`
-  - Next, pass our `CartContext` to the `useContext` hook and assign it to a variable named cart.
-  - Lastly we need to remove all instances of `props`
-    - Remove `props` from our parameters
-    - Remove `props` from our cart length
+[x] Time to do the same thing for our `Navigation` component.
+  [x] First import the `useContext` hook and our `CartContext`
+  [x] Next, pass our `CartContext` to the `useContext` hook and assign it to a variable named cart.
+  [x] Lastly we need to remove all instances of `props`
+    [x] Remove `props` from our parameters
+    [x] Remove `props` from our cart length
 
 We have now successfully converted our application into using `Context API` 🔥
 
 **MVP Requirements**
 
-- Create a `ProductContext` and a `CartContext`
-- Use the Provider Component from `ProductContext` and `CartContext` to provide data to child components
-- Consume data using the `useContext` hook from `ProductContext` and `CartContext`
+[x] Create a `ProductContext` and a `CartContext`
+[x] Use the Provider Component from `ProductContext` and `CartContext` to provide data to child components
+[x] Consume data using the `useContext` hook from `ProductContext` and `CartContext`
 
 ### Task 3: Stretch Problems
 
