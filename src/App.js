@@ -20,6 +20,12 @@ function App() {
 		setCart([...cart, item]);
 	};
 
+	const removeItem = selectedItem => {
+		// removes the given item from teh cart
+		let editedCart = cart.filter(item => item.id !== selectedItem.id);
+		setCart(editedCart);
+	}
+
 	return (
 		<div className="App">
 			<ProductContext.Provider value={{
@@ -28,7 +34,8 @@ function App() {
 			}} // the value is an object with two properties.  products: products is implied
 			>
 			<CartContext.Provider value={{
-				cart
+				cart,
+				removeItem
 			}}>
 					<Navigation cart={cart} />
 
