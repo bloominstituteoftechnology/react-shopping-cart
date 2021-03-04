@@ -7,6 +7,8 @@ import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 
+import { ProductContext } from './contexts/ProductContext';
+
 function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
@@ -18,6 +20,11 @@ function App() {
 
 	return (
 		<div className="App">
+			<ProductContext.Provider value={{
+				products,
+				addItem
+			}} // the value is an object with two properties.  products: products is implied
+			>
 			<Navigation cart={cart} />
 
 			{/* Routes */}
@@ -28,6 +35,7 @@ function App() {
 			<Route path="/cart">
 				<ShoppingCart cart={cart} />
 			</Route>
+			</ProductContext.Provider>
 		</div>
 	);
 }
