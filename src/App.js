@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 import data from './data';
 import {ProductContext} from './context/ProductContext';
-import {CartContext} from './context/CartContext'
+import CartContext from './context/CartContext';
 // Components
 import Navigation from './components/Navigation';
 import Products from './components/Products';
@@ -15,9 +15,7 @@ function App() {
 	const addItem = item => {
 		// add the given item to the cart
 		
-		const newItem = item
-
-		return setCart(newItem);
+		setCart([...cart, item])
 	};
 
 	return (
