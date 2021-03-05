@@ -18,22 +18,12 @@ function App() {
 	const addItem = item => {
 		// add the given item to the cart
 		
-		// products.filter((item, i) => {
-		// 	if(products[i] === item[i]){
-		// 		return setCart(item)
-		// 	}
-		// 	else{
-		// 		return cart
-		// 	}
-		
-		// })
-
-		//setCart to cart (must be an array if using spread operator)
-		setCart([...cart,item])
+		//setCart to what was in the cart and the new item (must be an array if using spread operator)
+		setCart([...cart, item])
 	};
 	console.log(cart)
 	
-	//Values only accept an object 
+	//Values only accept an object when using Context!!!
 	
 	return (
 		<div className="App">
