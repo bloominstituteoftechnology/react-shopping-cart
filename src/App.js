@@ -9,21 +9,31 @@ import ShoppingCart from './components/ShoppingCart';
 
 import { ProductContext } from './contexts/ProductContext';
 import { CartContext } from './contexts/CartContext';
+import useLocalStorage from './hooks/localStorage';
 
 
 function App() {
 	const [products] = useState(data);
-	const [cart, setCart] = useState([]);
+	// const [storedValue, setStoredValue] = useLocalStorage("cartKey", []);
+	// const [cart, setCart] = useState(storedValue);
+	const [cart, setCart] = useLocalStorage('cartKey', []);
+
+	console.log("Stored cart value: ", cart);
 
 	const addItem = item => {
 		// add the given item to the cart
-		setCart([...cart, item]);
+		const updatedCart = [...cart, item]
+		setCart(updatedCart)
+		// setStoredValue(updatedCart);
+		console.log("Added item to cart", updatedCart);
 	};
 
 	const removeItem = selectedItem => {
 		// removes the given item from teh cart
 		let editedCart = cart.filter(item => item.id !== selectedItem.id);
 		setCart(editedCart);
+		// setStoredValue(editedCart);
+		console.log("Removed item from cart", editedCart);
 	}
 
 	return (
