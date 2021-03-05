@@ -12,6 +12,7 @@ function App() {
 	const [cart, setCart] = useState([]);
 
 	const addItem = item => {
+	item = [...data]
 		// add the given item to the cart
 	};
 
@@ -19,14 +20,15 @@ function App() {
 		<div className="App">
 			<Navigation cart={cart} />
 
-			{/* Routes */}
-			<Route exact path="/">
-				<Products products={products} addItem={addItem} />
-			</Route>
+			<ProductContext.Provider value ={{products, addItem}}>
+				<Route exact path="/">
+					<Products/>
+				</Route>
 
-			<Route path="/cart">
-				<ShoppingCart cart={cart} />
-			</Route>
+				<Route path="/cart">
+					<ShoppingCart cart={cart} />
+				</Route>
+			</ProductContext.Provider>
 		</div>
 	);
 }
