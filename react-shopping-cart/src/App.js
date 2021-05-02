@@ -1,22 +1,30 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import data from './data';
+
 
 // Components
 import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 export const shoppingContext = createContext();
-function App() {
-	const [products] = useState(data);
+export default function App() {
+	const [products,setProducts] = useState([]);
 	const [cart, setCart] = useState([]);
 
+
+
+	const getData = () => data.then(res => res.json());
 	const addItem = item => {
 		setCart([...cart, item]);
 	};
 	const removeFromCart = (props) => {
 		setCart(cart.filter((p) => p.id !== props.id));
 	  };
+
+	  useEffect(() => {
+		getData().then(data => setProducts(data));
+	  }, []);
 
 	return (
 		<div className="App">
@@ -26,16 +34,18 @@ function App() {
 			<Route exact path="/"
 
 			render={() =>
-				<shoppingContext.Provider value={products}>
+				products && (
+					<shoppingContext.Provider value={products}>
 				<Products products={products} addItem={addItem} />
 			
 				</shoppingContext.Provider>
+				)
 			}
 		/>
 
 
  
-			<Route path="/cart"
+			{/* <Route path="/cart"
 				render={(props) => (
 					<ShoppingCart 
 					{...props}
@@ -43,9 +53,8 @@ function App() {
 					removeFromCart={removeFromCart}
 				/>
 				)}
-			/>
+			/> */}
 		</div>
 	);
 }
-
-export default App;
+ 
