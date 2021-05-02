@@ -1,7 +1,7 @@
 import React, { useState, createContext, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import data from './data';
-
+// const getData = () => fetch(data).then(res => res.json());
 
 // Components
 import Navigation from './components/Navigation';
@@ -12,9 +12,6 @@ export default function App() {
 	const [products,setProducts] = useState([]);
 	const [cart, setCart] = useState([]);
 
-
-
-	const getData = () => data.then(res => res.json());
 	const addItem = item => {
 		setCart([...cart, item]);
 	};
@@ -23,7 +20,8 @@ export default function App() {
 	  };
 
 	  useEffect(() => {
-		getData().then(data => setProducts(data));
+		
+		setProducts(data)
 	  }, []);
 
 	return (
@@ -31,17 +29,15 @@ export default function App() {
 			<Navigation cart={cart} />
 
 			{/* Routes */}
-			<Route exact path="/"
-
-			render={() =>
-				products && (
+			<Route exact path="/">
+			
 					<shoppingContext.Provider value={products}>
 				<Products products={products} addItem={addItem} />
 			
 				</shoppingContext.Provider>
-				)
-			}
-		/>
+			
+			
+			</Route>
 
 
  

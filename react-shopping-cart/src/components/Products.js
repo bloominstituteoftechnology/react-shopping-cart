@@ -6,7 +6,7 @@ import Product from './Product';
 const Products = props => {
 	return (
 		<shoppingContext.Consumer>
-			{({products}) =>{
+			{(products) =>{
 				return (
 					<div className="products-container">
 						{products.map(product => (
