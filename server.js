@@ -8,7 +8,7 @@ server.use(bodyParser.json());
 server.use(cors());
 
 // Data from https://rooted.nyc/
-const plantsData = require("./react-shopping-cart/src/data");
+const plantsData = require("./data/data");
 
 server.get("/", (req, res) => {
   res.json(plantsData);

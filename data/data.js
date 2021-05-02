@@ -1,4 +1,4 @@
-const data =  [
+export default [
 	{
 		id: 1,
 		title: 'The Art Of War',
