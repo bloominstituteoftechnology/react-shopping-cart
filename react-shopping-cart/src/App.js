@@ -53,18 +53,18 @@ export default function App() {
 				)}
 			/> */}
 			
-			<Route path="/cart"
-						render={(props) => (
+			<Route path="/cart" >
 							<cartContext.Provider value={cart}>
 								<ShoppingCart 
-							// {...props}
+							
 							cart={cart}
 							removeFromCart={removeFromCart}
 						/>
 							</cartContext.Provider>
-						)}
-					/> 
+					</Route>
 		</div>
+		
+		
 	);
 }
  
