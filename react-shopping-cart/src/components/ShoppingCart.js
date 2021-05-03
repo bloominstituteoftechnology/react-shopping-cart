@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 // Components
 import Item from './ShoppingCartItem';
@@ -26,7 +26,9 @@ const ShoppingCart = props =>{
 						// {console.log(cart)}
 						return (
 
-							<Item key={item.id} products={item} {...item} />
+							<Item key={item.id} products={item}
+							removeFromCart={props.removeFromCart}
+							{...item} />
 						 
 						)
 

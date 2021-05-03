@@ -17,7 +17,7 @@ export default function App() {
 	const addItem = item => {
 		setCart([...cart, item]);
 	};
-	const removeFromCart = (props) => {
+	const removeFromCart = props => {
 		setCart(cart.filter((p) => p.id !== props.id));
 	  };
 
@@ -56,10 +56,10 @@ export default function App() {
 			<Route path="/cart" >
 							<cartContext.Provider value={cart}>
 								<ShoppingCart 
-							
+							products={products}
 							cart={cart}
 							removeFromCart={removeFromCart}
-							{...cart}
+							// {...cart}
 						/>
 							</cartContext.Provider>
 					</Route>
