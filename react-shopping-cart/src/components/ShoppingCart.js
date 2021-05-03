@@ -16,24 +16,33 @@ const ShoppingCart = props =>{
 	return (
 		<cartContext.Consumer>
 			{(cart) =>{
-				
-					<div className="shopping-cart">
-			{cart.map(item => {
-				
-				{console.log(cart)}
-				<Item key={item.id} {...item} />
-				
-				
-		
-		})}
+				return (
 
+		<div className="shopping-cart">
+
+
+					{{cart}['cart'].map(item => {
+				
+						// {console.log(cart)}
+						return (
+
+							<Item key={item.id} products={item} {...item} />
+						 
+						)
+
+				})}
+		
+				
+				
+					
 		<div className="shopping-cart__checkout">
-				<p>Total: ${getCartTotal()}</p>
+				{/* <p>Total: ${getCartTotal()}</p> */}
 				<button>Checkout</button>
 			</div>
 		</div>
-			
+			);
 			}
+			
 
 			}
 

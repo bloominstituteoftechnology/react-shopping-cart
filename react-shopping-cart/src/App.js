@@ -33,7 +33,7 @@ export default function App() {
 			{/* Routes */}
 			<Route exact path="/">
 			
-					<shoppingContext.Provider value={products}>
+					<shoppingContext.Provider value={ products }>
 				<Products products={products} addItem={addItem} />
 			
 				</shoppingContext.Provider>
@@ -59,6 +59,7 @@ export default function App() {
 							
 							cart={cart}
 							removeFromCart={removeFromCart}
+							{...cart}
 						/>
 							</cartContext.Provider>
 					</Route>

@@ -7,8 +7,9 @@ const Products = props => {
 	return (
 		<shoppingContext.Consumer>
 			{(products) =>{
-				return (
-					<div className="products-container">
+		
+					return(
+						<div className="products-container">
 						{products.map(product => (
 									<Product
 											key={product.id}
@@ -17,7 +18,8 @@ const Products = props => {
 										/>
 								))}
 						</div>
-				);
+					);
+				
 			}
 
 			}
