@@ -36,7 +36,7 @@ const ShoppingCart = props =>{
 				
 					
 		<div className="shopping-cart__checkout">
-				{/* <p>Total: ${getCartTotal()}</p> */}
+				<p>Total: ${getCartTotal()}</p>
 				<button>Checkout</button>
 			</div>
 		</div>
