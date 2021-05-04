@@ -15,7 +15,12 @@ export default function App() {
 	const [cart, setCart] = useState([]);
 
 	const addItem = item => {
-		setCart([...cart, item]);
+		if(cart === null){
+			setCart([...cart, item]);
+		}else{
+			setCart([...cart, item]);
+			console.log(cart)
+		}
 	};
 	const removeFromCart = props => {
 		setCart(cart.filter((p) => p.id !== props.id));
@@ -34,7 +39,7 @@ export default function App() {
 			<Route exact path="/">
 			
 					<shoppingContext.Provider value={ products }>
-				<Products products={products} addItem={addItem} />
+				<Products product={products} addItem={addItem} />
 			
 				</shoppingContext.Provider>
 			
@@ -56,7 +61,7 @@ export default function App() {
 			<Route path="/cart" >
 							<cartContext.Provider value={cart}>
 								<ShoppingCart 
-							products={products}
+							product={products}
 							cart={cart}
 							removeFromCart={removeFromCart}
 							// {...cart}

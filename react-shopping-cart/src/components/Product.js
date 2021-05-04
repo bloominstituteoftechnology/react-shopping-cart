@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Product = (props) => {
-	{console.log(props)}
+	// {console.log(props)}
 	return (
 		<div className="product">
 			<img src={props.product.image} alt={`${props.product.title} book`} />

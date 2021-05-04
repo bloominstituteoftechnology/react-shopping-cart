@@ -26,7 +26,7 @@ const ShoppingCart = props =>{
 						// {console.log(cart)}
 						return (
 
-							<Item key={item.id} products={item}
+							<Item key={item.id} product={item}
 							removeFromCart={props.removeFromCart}
 							{...item} />
 						 
