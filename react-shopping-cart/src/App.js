@@ -13,13 +13,28 @@ export default function App() {
 
 	const [products,setProducts] = useState([]);
 	const [cart, setCart] = useState([]);
+	const [quan,setQuan] = useState([])
 
+	
 	const addItem = item => {
 		if(cart === null){
 			setCart([...cart, item]);
 		}else{
+			console.log("check for duplicates")
+			const duplicated = cart.map( (e) =>{
+				if(e.id === item.id){
+					const quanity = {
+						id:0,quantity:0
+					}
+					quanity.id = e.id
+					quanity.quantity = quanity + 1
+					return quanity
+				}else{
+					return item
+				}
+			})
+			console.log(duplicated)
 			setCart([...cart, item]);
-			console.log(cart)
 		}
 	};
 	const removeFromCart = props => {
