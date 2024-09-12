@@ -2,6 +2,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	width: 1600px;
+	width: 100%;
 	margin: 0 auto;
+}
+
+@media(max-width: 900px) {
+	.products-container {
+	display: inline-block;
+	}
 }
