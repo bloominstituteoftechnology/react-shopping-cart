@@ -1,6 +1,7 @@
-import React from 'react';
+import React from "react";
+// import { isCompositeComponent } from "react-dom/test-utils";
 
-const Product = props => {
+const Product = (props) => {
 	return (
 		<div className="product">
 			<img src={props.product.image} alt={`${props.product.title} book`} />
@@ -9,9 +10,7 @@ const Product = props => {
 
 			<p className="price">${props.product.price}</p>
 
-			<button onClick={() => props.addItem(props.product)}>
-				Add to cart
-			</button>
+			<button onClick={() => props.addItem(props.product)}>Add to cart</button>
 		</div>
 	);
 };
