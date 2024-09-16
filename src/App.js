@@ -14,7 +14,7 @@ function App() {
 	const addItem = item => {
 		// add the given item to the cart
 	};
-
+// This looks like a very cool project
 	return (
 		<div className="App">
 			<Navigation cart={cart} />
