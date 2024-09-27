@@ -8,6 +8,7 @@ Read these instructions carefully. Understand exactly what is expected _before_ 
 
 ### Commits
 
+
 Commit your code regularly and meaningfully. This helps both you and your team lead in case you ever need to return to old code for any number of reasons.
 
 ### Description
@@ -18,6 +19,9 @@ In this project you'll take take an almost completed e-commerce store and refact
 
 ### Task 1: Project Set up
 
+
+
+
 - [ ] Create a forked copy of this project.
 - [ ] Add your team lead as collaborator on Github.
 - [ ] Clone your OWN version of the repository in your terminal.
@@ -27,6 +31,7 @@ In this project you'll take take an almost completed e-commerce store and refact
 - [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
+
 
 ### Task 2: MVP
 
